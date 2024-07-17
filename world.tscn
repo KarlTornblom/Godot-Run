@@ -1,0 +1,54 @@
+[gd_scene load_steps=6 format=3 uid="uid://b5whisysupfbo"]
+
+[ext_resource type="PackedScene" uid="uid://fc1kseknxgj8" path="res://Player/Player.tscn" id="1_4b2q3"]
+[ext_resource type="Script" path="res://BG.gd" id="1_few3o"]
+[ext_resource type="Texture2D" uid="uid://dq6bbjd0t22ia" path="res://Assets/Packs/Sunnyland/environment/Background/back.png" id="2_gu42a"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yu3xu"]
+size = Vector2(1117, 218)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_resjr"]
+size = Vector2(247.25, 528.5)
+
+[node name="World" type="Node2D"]
+
+[node name="BG" type="ParallaxBackground" parent="."]
+script = ExtResource("1_few3o")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="BG"]
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Back" type="Sprite2D" parent="BG/ParallaxLayer"]
+position = Vector2(575.5, 320)
+scale = Vector2(3.0026, 2.66667)
+texture = ExtResource("2_gu42a")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 318.0
+offset_top = 118.0
+offset_right = 358.0
+offset_bottom = 141.0
+text = "This is the world"
+
+[node name="Player" parent="." instance=ExtResource("1_4b2q3")]
+position = Vector2(259, 135)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(544, 555)
+shape = SubResource("RectangleShape2D_yu3xu")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-31.375, 252.75)
+shape = SubResource("RectangleShape2D_resjr")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1085, 248)
+shape = SubResource("RectangleShape2D_resjr")
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = -16.0
+offset_top = 446.0
+offset_right = 1103.0
+offset_bottom = 617.0

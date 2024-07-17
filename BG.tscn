@@ -1,0 +1,77 @@
+[gd_scene load_steps=9 format=3 uid="uid://yxwjkyd56cpv"]
+
+[ext_resource type="Script" path="res://BG.gd" id="1_i8u6e"]
+[ext_resource type="Texture2D" uid="uid://dq6bbjd0t22ia" path="res://Assets/Packs/Sunnyland/environment/Background/back.png" id="1_tuaim"]
+[ext_resource type="Texture2D" uid="uid://8elxs2rcxxqm" path="res://Assets/Packs/Sunnyland/sprites/player/jump/player-jump-2.png" id="3_5pfw2"]
+[ext_resource type="Texture2D" uid="uid://bb51dikjo34cn" path="res://Assets/Packs/Sunnyland/environment/Background/middle.png" id="3_8nx12"]
+[ext_resource type="Texture2D" uid="uid://ctahbyrh1almt" path="res://Assets/Packs/Sunnyland/sprites/gem/gem-1.png" id="4_d0udi"]
+[ext_resource type="Texture2D" uid="uid://bj03uuoo6p1lh" path="res://Assets/Packs/Sunnyland/sprites/frog/jump/frog-jump-2.png" id="5_6kof3"]
+[ext_resource type="Texture2D" uid="uid://bfgd5swjgnddx" path="res://Assets/Packs/Woods Pack/ENVIRONMENT/Props/Sprites/branch-01.png" id="6_7u4yo"]
+[ext_resource type="Texture2D" uid="uid://dtjacaiybewrt" path="res://Assets/Environments/Forest/Forest Expansion Pack/Sprites/tower.png" id="7_yb5dx"]
+
+[node name="BG" type="ParallaxBackground"]
+script = ExtResource("1_i8u6e")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Back" type="Sprite2D" parent="ParallaxLayer"]
+position = Vector2(575.5, 320)
+scale = Vector2(3.0026, 2.66667)
+texture = ExtResource("1_tuaim")
+
+[node name="Cool" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.5, 0.5)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Player-jump-2" type="Sprite2D" parent="Cool"]
+position = Vector2(168, 312)
+texture = ExtResource("3_5pfw2")
+
+[node name="Gem-1" type="Sprite2D" parent="Cool"]
+position = Vector2(200, 344)
+texture = ExtResource("4_d0udi")
+
+[node name="Frog-jump-2" type="Sprite2D" parent="Cool"]
+position = Vector2(696, 296)
+texture = ExtResource("5_6kof3")
+
+[node name="Branch-01" type="Sprite2D" parent="Cool"]
+position = Vector2(528, 368)
+texture = ExtResource("6_7u4yo")
+
+[node name="Tower" type="Sprite2D" parent="Cool"]
+position = Vector2(952, 280)
+texture = ExtResource("7_yb5dx")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.7, 0.7)
+motion_mirroring = Vector2(1232, 0)
+
+[node name="Middle" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(88, 464)
+texture = ExtResource("3_8nx12")
+
+[node name="Middle2" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(264, 472)
+texture = ExtResource("3_8nx12")
+
+[node name="Middle3" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(440, 464)
+texture = ExtResource("3_8nx12")
+
+[node name="Middle4" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(616, 464)
+texture = ExtResource("3_8nx12")
+
+[node name="Middle5" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(792, 464)
+texture = ExtResource("3_8nx12")
+
+[node name="Middle6" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(968, 464)
+texture = ExtResource("3_8nx12")
+
+[node name="Middle7" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(1144, 464)
+texture = ExtResource("3_8nx12")
